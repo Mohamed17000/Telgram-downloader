@@ -4,6 +4,7 @@ import logging
 import asyncio
 import sys
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 # Load environment variables
 load_dotenv()
@@ -316,4 +317,5 @@ async def format_callback(client: Client, query: CallbackQuery):
 
 if __name__ == "__main__":
     logger.info("🤖 Bot is starting with Pyrogram...")
+    keep_alive()
     app.run()
